@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee</title>
+    <style>
+      div {
+        display: block;
+        background: radial-gradient(
+          905px at 4.9% 85.8%,
+          rgb(255, 243, 242) 0.1%,
+          rgb(255, 247, 220) 57.6%
+        );
+        border: 3px solid #f3cba5;
+        border-radius: 4px;
+        width: 70%;
+        margin: 5px auto;
+        padding: 0px 10px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        font-family: Snell Roundhand, cursive;
+        color: #d55b3e;
+        border: 3px solid #db996c;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+      img {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 50%;
+        width: 300px;
+        border-radius: 8px;
+        margin: auto;
+      }
+      span {
+        text-align: center;
+      }
+      p {
+        font-size: 20px;
+        font-weight: Andale Mono, monospace;
+        line-height: 1.5;
+        color: #222831;
+      }
+      button {
+        display: block;
+        margin: 5px auto;
+        font-size: 24px;
+        color: #7b3c3c;
+        background-color: #db996c;
+        border-color: #db996c;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: #d55b3e;
+      }
+      hr {
+        color: #db996c;
+        border: 1px solid #db996c;
+      }
+      em {
+        margin: 0px auto;
+        color: #233142;
+        text-align: center;
+        font-size: 18px;
+      }
+      h2 {
+        text-align: center;
+        margin: 5px auto;
+      }
+      .wiki {
+        text-decoration: none;
+        transition: ease 2s;
+        color: #233142;
+      }
+      .wiki:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>I love coffee</h1>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/465/original/3-3.jpg?1666976388"
+        alt="Coffee"
+      />
+      <p>
+        <span>Coffee</span> is a drink prepared from roasted coffee beans.
+        <br />
+        Darkly colored, bitter, and slightly acidic, coffee has a stimulating
+        effect on humans, primarily due to its caffeine content.<br />
+        <strong>It is the most popular hot drink in the world.</strong>
+      </p>
+      <a
+        class="wiki"
+        href="https://en.wikipedia.org/wiki/Coffee"
+        target="_blank"
+      >
+        <em>Read more on Wiki</em>
+      </a>
+      <button>Try coffee</button>
+      <hr />
+      <h2>
+        <em>Instant coffee is not a coffee</em>
+      </h2>
+    </div>
+    <script>
+      function conversation() {
+        let Name = prompt("Hi! What is your name?");
+        let question = prompt(Name + ", do you like coffee?");
+        let Question = question.toLowerCase();
+        if (Question === "yes") {
+          alert("Welcome to the club, " + Name + "!");
+        } else {
+          alert("You just haven't met Your coffee yet");
+        }
+      }
+      let interaction = document.querySelector("button");
+      interaction.addEventListener("click", conversation);
+    </script>
+  </body>
+</html>
